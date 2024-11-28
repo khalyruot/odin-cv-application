@@ -25,7 +25,7 @@ function App() {
     }
   );
 
-  const[submission_4, setSubmission_4] = useState(["a","b","c"]);
+  const[submission_4, setSubmission_4] = useState(["a","b"]);
 
   const handleFormSubmit_1 = (formData) => {
     setSubmission_1(formData);
