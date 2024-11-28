@@ -11,6 +11,10 @@ function App() {
      fName: '',
      jobTitle: ''
   });
+  const[submission_1,setSubmission_1] = useState({
+     fName: '',
+     jobTitle: ''
+  });
   const[submission_2,setSubmission_2] = useState(
     {
       employer: "",
@@ -25,7 +29,7 @@ function App() {
     }
   );
 
-  const[submission_4, setSubmission_4] = useState(["a","b","c", "d"]);
+  const[submission_4, setSubmission_4] = useState(["a","b","c"]);
 
   const handleFormSubmit_1 = (formData) => {
     setSubmission_1(formData);
@@ -44,6 +48,7 @@ function App() {
   }
 
   //submission_1.fName = submission_1.fName.toLocaleUpperCase();
+  //submission_1.fName = submission_1.fName.toLocaleUpperCase();
 
   
   
@@ -60,6 +65,13 @@ function App() {
         <div id="work_experience_info_right"><Resume_field name={submission_2.employer} jobTitle={submission_2.date}/></div>
         <div id="education_right"><Resume_field name={submission_3.degree} jobTitle={submission_3.school}/></div>
       </div>
+
+      <ol>
+        {submission_4.map((data,index)=>
+        <li key={index}>{data}</li>
+        
+        )}
+      </ol>
 
       <ol>
         {submission_4.map((data,index)=>
