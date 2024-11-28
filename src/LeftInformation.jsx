@@ -30,7 +30,6 @@ function LeftInformation({ name_1, name_2, Point_1, Point_2, onSubmit }) {
             <input
               type="text"
               name={name_1}
-              value={FormData.fName}
               onChange={handleInputChange}
               placeholder="Enter Name"
             />
@@ -39,7 +38,6 @@ function LeftInformation({ name_1, name_2, Point_1, Point_2, onSubmit }) {
             <input
               type="text"
               name={name_2}
-              value={FormData.jobTitle}
               onChange={handleInputChange}
               placeholder="Enter Job Title"
             />

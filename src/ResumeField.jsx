@@ -1,13 +1,18 @@
 
-function Resume_field({name, jobTitle}){
+function Resume_field({submission=[], name_1, name_2}){
     
     return(
        <div id="resume_field">
-            <ul>
-                <li><h1>{name}</h1></li>
-                <li><h2>{jobTitle}</h2></li>
-            </ul>
+            <ol>
+                {submission.map((data,index)=>
+                    <li key={index}>
+                        <h4>{data[name_1]}</h4>
+                        <h4>{data[name_2]}</h4>
+                    </li> 
+                )}
+            </ol>
        </div>
+       
     );
 }
 
