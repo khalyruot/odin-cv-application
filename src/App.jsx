@@ -1,7 +1,10 @@
 
 import './App.css'
+import EducationInfo from './EducationInfo.jsx';
 import LeftInformation from './LeftInformation'
-import Resume_field from './ResumeField.jsx'
+import ProfileInfo from './PersonalInfo.jsx';
+import Resume_field from './ResumeField.jsx';
+import WorkExperienceInfo from './WorkExperienceInfo.jsx';
 import React, { useState } from 'react';
 
 
@@ -40,9 +43,9 @@ function App() {
         <div id="education_left"><LeftInformation name_1 = "degree" name_2="school"Point_1="Enter Your Degree: " Point_2="Enter Your School Name: " onSubmit={handleFormSubmit_3} /></div>
       </div>
       <div id="rightSide">
-        <div id="basic_info_right"><Resume_field submission={submission_1} name_1={"fName"} name_2={"jobTitle"}/></div>
-        <div id="work_experience_info_right"><Resume_field submission={submission_2} name_1={"employer"} name_2={"date"}/></div>
-        <div id="education_right"><Resume_field submission={submission_3} name_1={"degree"} name_2={"school"}/></div>
+        <div id="basic_info_right"><ProfileInfo submission={submission_1} name_1={"fName"} name_2={"jobTitle"} listStyleType={{ listStyleType: "none" }} /></div>
+        <div id="work_experience_info_right"><WorkExperienceInfo submission={submission_2} name_1={"employer"} name_2={"date"}/></div>
+        <div id="education_right"><EducationInfo submission={submission_3} name_1={"degree"} name_2={"school"}/></div>
       </div>
       
     </div>

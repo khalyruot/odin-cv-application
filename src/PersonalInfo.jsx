@@ -1,19 +1,19 @@
 
-function PersonalInfo({name, jobTitle}){
+function ProfileInfo({submission=[], name_1, name_2, listStyleType}){
     
     return(
        <div id="resume_field">
-            <div id="top_basic_info">
-                <ul>
-                    <li><h1>{name}</h1></li>
-                    <li><h2>{jobTitle}</h2></li>
-                </ul>
-                
-                
-            </div>
-        
+            <ol>
+                {submission.map((data,index)=>
+                    <li key={index} style={listStyleType}>
+                        <h4>{data[name_1]}</h4>
+                        <h4>{data[name_2]}</h4>
+                    </li> 
+                )}
+            </ol>
        </div>
+       
     );
 }
 
-export default Resume_field;
+export default ProfileInfo;
